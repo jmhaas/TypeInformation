@@ -16,7 +16,15 @@ public class ClassImplementsInterface {
         return false;
     }
 
-
+    public static boolean classImplementsInterface(Object implementor, Object implemented) {
+        Class[] interfaces = implementor.getClass().getInterfaces();
+        for (Class cl : interfaces) {
+            if (cl == implemented){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 

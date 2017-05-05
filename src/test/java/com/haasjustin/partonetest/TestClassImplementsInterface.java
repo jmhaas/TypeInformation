@@ -5,6 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by justinhaas on 5/4/17.
@@ -26,33 +29,47 @@ public class TestClassImplementsInterface {
 
 
     @Test
-    public void testClassImplementsInterfaceTrue()
-
-    {
-        //:given
+    public void testClassImplementsInterfaceTrue() {
+        
         Class implementor = testInterface;
         Class implemented = arrayList;
 
-        //:when
         boolean result = ClassImplementsInterface.classImplementsInterface(implementor, implemented);
 
-        //:then
         Assert.assertTrue(result);
     }
 
 
     @Test
-    public void testClassImplementationsInterfaceFalse()
+    public void testClassImplementsInterfaceFalse() {
 
-    {
-        //given
         Class implementor = testInterface;
         Class implemented = arrayList;
 
-        //:when
         boolean result = ClassImplementsInterface.classImplementsInterface(implementor, implemented);
 
-        //:then
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void testClassImplementsInterfaceObjectTrue() {
+
+        ArrayList implementor = new ArrayList();
+        Class implemented = List.class;
+
+        boolean result = ClassImplementsInterface.classImplementsInterface(implementor, implemented);
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void testClassImplementsInterfaceObjectFalse() {
+
+        String implementor = ("This is wrong");
+        Class implemented = List.class;
+
+        boolean result = ClassImplementsInterface.classImplementsInterface(implementor, implemented);
+
         Assert.assertFalse(result);
     }
 
