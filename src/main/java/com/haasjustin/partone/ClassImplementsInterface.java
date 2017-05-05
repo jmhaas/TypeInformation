@@ -9,7 +9,7 @@ public class ClassImplementsInterface {
     public static boolean classImplementsInterface(Class implementor, Class implemented) {
         Class[] interfaces = implementor.getInterfaces();
         for (Class cl : interfaces) {
-            if (cl == implemented){
+            if (cl == implemented) {
                 return true;
             }
         }
@@ -19,7 +19,7 @@ public class ClassImplementsInterface {
     public static boolean classImplementsInterface(Object implementor, Object implemented) {
         Class[] interfaces = implementor.getClass().getInterfaces();
         for (Class cl : interfaces) {
-            if (cl == implemented){
+            if (cl == implemented) {
                 return true;
             }
         }
@@ -27,7 +27,5 @@ public class ClassImplementsInterface {
     }
 
 
-
-
-
 }
+

@@ -30,9 +30,9 @@ public class TestClassImplementsInterface {
 
     @Test
     public void testClassImplementsInterfaceTrue() {
-        
-        Class implementor = testInterface;
-        Class implemented = arrayList;
+
+        Class implementor = ArrayList.class;
+        Class implemented = List.class;
 
         boolean result = ClassImplementsInterface.classImplementsInterface(implementor, implemented);
 
@@ -72,6 +72,7 @@ public class TestClassImplementsInterface {
 
         Assert.assertFalse(result);
     }
+
 
 
 }
